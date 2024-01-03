@@ -20,12 +20,28 @@ I double-checked that the dataloader was working successfully (spoiler: it did).
 
 ![Alt text](./notebooks/part2_2.png)
 
-I learned that I could fix this issue by increasing the training time (some students had had the same issue as they commented so on discord). I played around with the hyperparameters, and after increasing the epochs to 50, the character accuracy improved (15.80) although it was far from being good. I then tried 150 epochs with a slight improvement in results; the best model achieved a character accuracy of 16.37, while the word accuracy remained the same:
-
-![Alt text](./notebooks/part2_3.png)
-
+I learned that I could possibly fix this issue by increasing the training time (some students had had the same issue as they commented so on discord). As a test, I increased the epochs up to 50 and the character accuracy improved (15.80) although it was far from being good. The word accuracy was still really bad (0.00) but at least it was not *nan* anymore.
 
 # Part 4 – Evaluation and Error Analysis
+
+Something that caught my attention was that, when increasing the number of epochs, the number of characters in each predicted label was also higher. That is:
+
+- 4 epocs: no predictions
+
+| Number of epochs | Predictions |
+| -------- | -------- |
+| 4 (original model) | empty strings |
+| 15 | "MH" |
+| 50 | "ML20" |
+| 100 | "MH0TBX" |
+
+I believe the increase in the number of epochs gives the model more time to learn from the data (each epoch = one pass through the entire dataset), hence it is better at predicting the labels (meaning more characters in the predicted labels). However, a better performance of the model does not only depend on increasing epochs, so I also played around with other hyperparameters.
+
+
+
+
+
+
 
 
 
