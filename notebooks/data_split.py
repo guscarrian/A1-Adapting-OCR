@@ -2,9 +2,9 @@ import os
 import random
 
 # Defining the paths for the source folder and the destination folders (train and test folders):
-source_folder = "/home/guscarrian@GU.GU.SE/LT2326-ML/A1/Adapting-OCR/carplates_dataset/LP-characters/images"
-train_folder = "/home/guscarrian@GU.GU.SE/LT2326-ML/A1/Adapting-OCR/carplates_dataset/LP-characters/train_images"
-test_folder = "/home/guscarrian@GU.GU.SE/LT2326-ML/A1/Adapting-OCR/carplates_dataset/LP-characters/test_images"
+source_folder = "/home/guscarrian@GU.GU.SE/A1-Adapting-OCR/carplates_dataset/LP-characters/images"
+train_folder = "/home/guscarrian@GU.GU.SE/A1-Adapting-OCR/carplates_dataset/LP-characters/train_images"
+test_folder = "/home/guscarrian@GU.GU.SE/A1-Adapting-OCR/carplates_dataset/LP-characters/test_images"
 
 # Creating the train and test folders in case they don't exist and getting list of image files:
 os.makedirs(train_folder, exist_ok=True)
